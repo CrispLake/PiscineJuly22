@@ -1,0 +1,5 @@
+Credentials cache: API:5150
+        Principal: emajuri@HIVE.FI
+
+  Issued                Expires               Principal
+Jun 28 17:00:36 2022  Jun 29 03:00:36 2022  krbtgt/HIVE.FI@HIVE.FI

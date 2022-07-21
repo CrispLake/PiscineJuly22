@@ -1,0 +1,57 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_square.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vmustone <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/09 17:08:48 by vmustone          #+#    #+#             */
+/*   Updated: 2022/07/09 21:29:28 by emajuri          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	check_square(char **puzzle, int row, int column, char guess)
+{
+	int boxStartRow = row - row % 3;
+	int boxStartCol = column - column % 3;
+
+	for (int row = 0; row < 3; row++)
+        for (int col = 0; col < 3; col++)
+            if (puzzle[row + boxStartRow][column + boxStartCol] == guess)
+                return 1;
+    return 0;
+
+
+/*	int	starting_row;
+	int	starting_column;
+	int	index;
+
+	index = 0;
+    if ((row / 3) <= 0)
+        starting_row = 0;
+	else if ((row / 3) <= 1) {
+        starting_row = 3;
+    } else {
+        starting_row = 6;
+    }
+    if ((column / 3) <= 0)
+        starting_column = 0;
+	else if ((column / 3) <= 1) {
+        starting_column = 3;
+    } else {
+        starting_column = 6;
+    }
+    
+    while (puzzle[starting_column][starting_row + index] != guess)
+    {
+		index++;
+        if ( index == 2)
+		{
+			if (index == 2 && (starting_column == 2 || starting_column == 5 || starting_column == 8))
+				return (1);
+            index = 0;
+            starting_column++;
+		}
+    }
+    return(0);*/
+}
